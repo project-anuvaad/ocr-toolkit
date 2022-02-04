@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "d81cdc55-1362-4c9c-ade1-d987a4ef3c36",
+		"name": "Mestro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "lcoal process",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"pm.globals.set(\"jobId\",response.jobId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"inputs\":[{\n    \"invoice\" : \"faktura-30156678218.pdf\",\n    \"supplierId\" : \"SkellefteaKraft\"\n}],\n\"meta\":{},\n\"config\" :{\"ocr\":\"FAST\"}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/mestro/v0/invoice_to_json/process",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"mestro",
+						"v0",
+						"invoice_to_json",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "local check status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jobId\":\"{{jobId}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/mestro/v0/invoice_to_json/get_status",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"mestro",
+						"v0",
+						"invoice_to_json",
+						"get_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remote process",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"pm.globals.set(\"rjobId\",response.jobId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"inputs\":[{\n    \"invoice\" : \"faktura-30156678218.pdf\",\n    \"supplierId\" : \"SkellefteaKraft\"\n}],\n\"meta\":{},\n\"config\" :{\"ocr\":\"FAST\"}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://52.164.191.160:5000/mestro/v0/invoice_to_json/process",
+					"protocol": "http",
+					"host": [
+						"52",
+						"164",
+						"191",
+						"160"
+					],
+					"port": "5000",
+					"path": [
+						"mestro",
+						"v0",
+						"invoice_to_json",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remote check status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jobId\":\"{{rjobId}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://52.164.191.160:5000/mestro/v0/invoice_to_json/get_status",
+					"protocol": "http",
+					"host": [
+						"52",
+						"164",
+						"191",
+						"160"
+					],
+					"port": "5000",
+					"path": [
+						"mestro",
+						"v0",
+						"invoice_to_json",
+						"get_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remote check status Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"jobId\":\"bf2b559a-5352-4275-8d33-17fb1b3fb8cb\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://52.164.191.160:5000/mestro/v0/invoice_to_json/get_status",
+					"protocol": "http",
+					"host": [
+						"52",
+						"164",
+						"191",
+						"160"
+					],
+					"port": "5000",
+					"path": [
+						"mestro",
+						"v0",
+						"invoice_to_json",
+						"get_status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

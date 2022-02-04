@@ -1,0 +1,4 @@
+SkellefteaKraft:
+  MODEL_PATH: ./src/utils/layout/SkellefteaKraft/model_0024999.pth
+  CONFIG: ./src/utils/layout/SkellefteaKraft/config.yaml
+  

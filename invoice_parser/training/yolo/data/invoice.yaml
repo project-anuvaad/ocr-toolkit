@@ -1,0 +1,9 @@
+train: ../invoice_data/train/ 
+val:  ../invoice_data/val/
+
+
+# number of classes
+nc: 8
+
+# class names
+names: ['m','h','fm1','fm2','fm3','fd','t','ms']
