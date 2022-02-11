@@ -35,7 +35,7 @@ Error profiling - (Jupyter notebook) Error profiling on the generated csv from o
 https://github.com/project-anuvaad/ocr-toolkit/blob/ocr_toolkit/error-profiling/error_profiling.ipynb
 ```
 ```
-![plot](error-profiling-images/error-profiling-img1.png)
+![plot](https://github.com/project-anuvaad/ocr-toolkit/blob/ocr_toolkit/error-profiling/error-profiling-img1.png)
 
 ```                            
 SYNTHETIC DATA GENERATOR - Provided a txt document containing line texts, lines from error profiling, 
