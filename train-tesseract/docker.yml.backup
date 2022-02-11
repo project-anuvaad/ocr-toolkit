@@ -1,0 +1,11 @@
+version: "1"
+
+services:
+  app:
+    container_name: train-ocr-hin
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    command: sh start.sh
