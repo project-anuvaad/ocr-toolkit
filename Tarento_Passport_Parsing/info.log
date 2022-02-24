@@ -2592,3 +2592,82 @@ AttributeError: 'list' object has no attribute 'split'
 [2022-02-24 09:59:32,964] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow_response successfully generated response for rest server
 [2022-02-24 09:59:32,964] {loghandler.py:21} Thread-1 INFO in loghandler: Resource Vision_OCR api response completed
 [2022-02-24 09:59:32,966] {_internal.py:225} Thread-1 INFO in _internal: 127.0.0.1 - - [24/Feb/2022 09:59:32] "POST /tarento/v0/passport-parsing HTTP/1.1" 200 -
+[2022-02-24 12:08:29,119] {loghandler.py:21} Thread-9 INFO in loghandler: Resource OCR service started
+[2022-02-24 12:08:29,123] {loghandler.py:21} Thread-9 INFO in loghandler: non workflow response started the response generation
+[2022-02-24 12:08:29,140] {loghandler.py:49} Thread-9 DEBUG in loghandler: process starting  for request {'config': {'language': {'sourceLanguage': 'en'}, 'superresolution': 'True'}, 'image': [{'imageUri': 'https://www.geo.tv/assets/uploads/updates/2017-04-11/l_137670_052223_updates.jpg'}]}
+[2022-02-24 12:08:34,591] {loghandler.py:78} Thread-9 ERROR in loghandler: Error occured during ocr
+Traceback (most recent call last):
+  File "/home/naresh/git_folders/ocr-toolkit/Tarento_Passport_Parsing/src/services/main.py", line 29, in process_input
+    file_properties.get_lang(),
+  File "/home/naresh/git_folders/ocr-toolkit/Tarento_Passport_Parsing/src/services/ocr.py", line 46, in get_sentences
+    return self.page_level_ocr()
+  File "/home/naresh/git_folders/ocr-toolkit/Tarento_Passport_Parsing/src/services/ocr.py", line 66, in page_level_ocr
+    val=draw_box(image_copy,lines,self.image_name)
+  File "/home/naresh/git_folders/ocr-toolkit/Tarento_Passport_Parsing/src/utilities/utils.py", line 158, in draw_box
+    cv2.imwrite(config.SAVE_PATH_BOX+image_name+".jpg", image)
+TypeError: must be str, not NoneType
+[2022-02-24 12:08:34,591] {loghandler.py:21} Thread-9 INFO in loghandler: non workflow_response successfully generated response for rest server
+[2022-02-24 12:08:34,591] {loghandler.py:21} Thread-9 INFO in loghandler: Resource Vision_OCR api response completed
+[2022-02-24 12:08:34,592] {_internal.py:225} Thread-9 INFO in _internal: 127.0.0.1 - - [24/Feb/2022 12:08:34] "POST /tarento/v0/passport-parsing HTTP/1.1" 200 -
+[2022-02-24 12:09:16,905] {geos.py:73} MainThread DEBUG in geos: Found GEOS DLL: <CDLL '/home/naresh/layout/lib/python3.6/site-packages/shapely/.libs/libgeos_c-a68605fd.so.1.13.1', handle 5a2bbc0 at 0x7f8f4c654a20>, using it.
+[2022-02-24 12:09:16,917] {geos.py:38} MainThread DEBUG in geos: Trying `CDLL(libc.so.6)`
+[2022-02-24 12:09:16,919] {geos.py:55} MainThread DEBUG in geos: Library path: 'libc.so.6'
+[2022-02-24 12:09:16,919] {geos.py:56} MainThread DEBUG in geos: DLL: <CDLL 'libc.so.6', handle 7f8fec257000 at 0x7f8f4c654c88>
+[2022-02-24 12:09:17,933] {checkpoint.py:150} MainThread INFO in checkpoint: [Checkpointer] Loading from ./src/utilities/primalinenet/passport_roi_v1.pth ...
+[2022-02-24 12:09:23,006] {_internal.py:225} MainThread WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-02-24 12:09:23,007] {_internal.py:225} MainThread INFO in _internal:  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+[2022-02-24 12:09:25,652] {loghandler.py:21} Thread-1 INFO in loghandler: Resource OCR service started
+[2022-02-24 12:09:25,652] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow response started the response generation
+[2022-02-24 12:09:25,654] {loghandler.py:49} Thread-1 DEBUG in loghandler: process starting  for request {'config': {'language': {'sourceLanguage': 'en'}, 'superresolution': 'True'}, 'image': [{'imageUri': 'https://www.geo.tv/assets/uploads/updates/2017-04-11/l_137670_052223_updates.jpg'}]}
+[2022-02-24 12:09:30,406] {loghandler.py:78} Thread-1 ERROR in loghandler: Error occured during ocr
+Traceback (most recent call last):
+  File "/home/naresh/git_folders/ocr-toolkit/Tarento_Passport_Parsing/src/services/main.py", line 29, in process_input
+    file_properties.get_lang(),
+  File "/home/naresh/git_folders/ocr-toolkit/Tarento_Passport_Parsing/src/services/ocr.py", line 46, in get_sentences
+    return self.page_level_ocr()
+  File "/home/naresh/git_folders/ocr-toolkit/Tarento_Passport_Parsing/src/services/ocr.py", line 66, in page_level_ocr
+    val=draw_box(image_copy,lines,self.image_name)
+  File "/home/naresh/git_folders/ocr-toolkit/Tarento_Passport_Parsing/src/utilities/utils.py", line 159, in draw_box
+    cv2.imwrite(config.SAVE_PATH_BOX+image_name+".jpg", image)
+TypeError: must be str, not NoneType
+[2022-02-24 12:09:30,407] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow_response successfully generated response for rest server
+[2022-02-24 12:09:30,407] {loghandler.py:21} Thread-1 INFO in loghandler: Resource Vision_OCR api response completed
+[2022-02-24 12:09:30,408] {_internal.py:225} Thread-1 INFO in _internal: 127.0.0.1 - - [24/Feb/2022 12:09:30] "POST /tarento/v0/passport-parsing HTTP/1.1" 200 -
+[2022-02-24 12:11:31,118] {geos.py:73} MainThread DEBUG in geos: Found GEOS DLL: <CDLL '/home/naresh/layout/lib/python3.6/site-packages/shapely/.libs/libgeos_c-a68605fd.so.1.13.1', handle 49743f0 at 0x7f9f084cc908>, using it.
+[2022-02-24 12:11:31,128] {geos.py:38} MainThread DEBUG in geos: Trying `CDLL(libc.so.6)`
+[2022-02-24 12:11:31,129] {geos.py:55} MainThread DEBUG in geos: Library path: 'libc.so.6'
+[2022-02-24 12:11:31,129] {geos.py:56} MainThread DEBUG in geos: DLL: <CDLL 'libc.so.6', handle 7f9fa80cb000 at 0x7f9f084ccb70>
+[2022-02-24 12:11:31,988] {checkpoint.py:150} MainThread INFO in checkpoint: [Checkpointer] Loading from ./src/utilities/primalinenet/passport_roi_v1.pth ...
+[2022-02-24 12:11:37,375] {_internal.py:225} MainThread WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-02-24 12:11:37,376] {_internal.py:225} MainThread INFO in _internal:  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+[2022-02-24 12:11:39,903] {loghandler.py:21} Thread-1 INFO in loghandler: Resource OCR service started
+[2022-02-24 12:11:39,903] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow response started the response generation
+[2022-02-24 12:11:39,904] {loghandler.py:49} Thread-1 DEBUG in loghandler: process starting  for request {'config': {'language': {'sourceLanguage': 'en'}, 'superresolution': 'True'}, 'image': [{'imageUri': 'https://www.geo.tv/assets/uploads/updates/2017-04-11/l_137670_052223_updates.jpg'}]}
+[2022-02-24 12:12:22,272] {loghandler.py:21} Thread-1 INFO in loghandler:  Completed ocr process
+[2022-02-24 12:12:22,272] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow_response successfully generated response for rest server
+[2022-02-24 12:12:22,273] {loghandler.py:21} Thread-1 INFO in loghandler: Resource Vision_OCR api response completed
+[2022-02-24 12:12:22,274] {_internal.py:225} Thread-1 INFO in _internal: 127.0.0.1 - - [24/Feb/2022 12:12:22] "POST /tarento/v0/passport-parsing HTTP/1.1" 200 -
+[2022-02-24 12:12:53,977] {loghandler.py:21} Thread-9 INFO in loghandler: Resource OCR service started
+[2022-02-24 12:12:53,978] {loghandler.py:21} Thread-9 INFO in loghandler: non workflow response started the response generation
+[2022-02-24 12:12:53,978] {loghandler.py:49} Thread-9 DEBUG in loghandler: process starting  for request {'config': {'language': {'sourceLanguage': 'en'}, 'superresolution': 'False'}, 'image': [{'imageUri': 'https://www.geo.tv/assets/uploads/updates/2017-04-11/l_137670_052223_updates.jpg'}]}
+[2022-02-24 12:13:01,794] {loghandler.py:21} Thread-9 INFO in loghandler:  Completed ocr process
+[2022-02-24 12:13:01,795] {loghandler.py:21} Thread-9 INFO in loghandler: non workflow_response successfully generated response for rest server
+[2022-02-24 12:13:01,795] {loghandler.py:21} Thread-9 INFO in loghandler: Resource Vision_OCR api response completed
+[2022-02-24 12:13:01,796] {_internal.py:225} Thread-9 INFO in _internal: 127.0.0.1 - - [24/Feb/2022 12:13:01] "POST /tarento/v0/passport-parsing HTTP/1.1" 200 -
+[2022-02-24 12:14:45,135] {geos.py:73} MainThread DEBUG in geos: Found GEOS DLL: <CDLL '/home/naresh/layout/lib/python3.6/site-packages/shapely/.libs/libgeos_c-a68605fd.so.1.13.1', handle 6082320 at 0x7efdaeae9908>, using it.
+[2022-02-24 12:14:45,145] {geos.py:38} MainThread DEBUG in geos: Trying `CDLL(libc.so.6)`
+[2022-02-24 12:14:45,145] {geos.py:55} MainThread DEBUG in geos: Library path: 'libc.so.6'
+[2022-02-24 12:14:45,146] {geos.py:56} MainThread DEBUG in geos: DLL: <CDLL 'libc.so.6', handle 7efe4e6e9000 at 0x7efdaeae9b70>
+[2022-02-24 12:14:46,058] {checkpoint.py:150} MainThread INFO in checkpoint: [Checkpointer] Loading from ./src/utilities/primalinenet/passport_roi_v1.pth ...
+[2022-02-24 12:14:50,275] {_internal.py:225} MainThread WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-02-24 12:14:50,275] {_internal.py:225} MainThread INFO in _internal:  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+[2022-02-24 12:14:52,370] {loghandler.py:21} Thread-1 INFO in loghandler: Resource OCR service started
+[2022-02-24 12:14:52,371] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow response started the response generation
+[2022-02-24 12:14:52,371] {loghandler.py:49} Thread-1 DEBUG in loghandler: process starting  for request {'config': {'language': {'sourceLanguage': 'en'}, 'superresolution': 'False'}, 'image': [{'imageUri': 'https://www.geo.tv/assets/uploads/updates/2017-04-11/l_137670_052223_updates.jpg'}]}
+[2022-02-24 12:15:01,549] {loghandler.py:21} Thread-1 INFO in loghandler:  Completed ocr process
+[2022-02-24 12:15:01,550] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow_response successfully generated response for rest server
+[2022-02-24 12:15:01,550] {loghandler.py:21} Thread-1 INFO in loghandler: Resource Vision_OCR api response completed
+[2022-02-24 12:15:01,551] {_internal.py:225} Thread-1 INFO in _internal: 127.0.0.1 - - [24/Feb/2022 12:15:01] "POST /tarento/v0/passport-parsing HTTP/1.1" 200 -

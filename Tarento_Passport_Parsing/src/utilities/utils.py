@@ -137,7 +137,8 @@ def end_point_correction(region, y_margin,x_margin, ymax,xmax):
     xend = x + w + x_margin
     return True,int(ystart), int(yend), int(xstart), int(xend)
 
-def draw_box(image,regions,image_name)  :      
+def draw_box(image,regions,image_name)  :  
+    print(image_name)    
     for line_index, line in enumerate(regions):
         ground = line['boundingBox']['vertices']
         color = (255, 0, 0)

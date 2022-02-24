@@ -4,7 +4,7 @@ from anuvaad_auditor.loghandler import log_exception
 import requests
 import numpy as np
 import cv2
-import base64
+import base64,uuid
 import hashlib
 from html import escape
 
@@ -91,11 +91,15 @@ class File:
         return len(self.file["image"])
     @log_error
     def get_images_name(self,im_index):
-        if self.im_source is "local_path":
-            name = self.file["image"][im_index][self.im_source].split(".")[0]
-            return name
-        else:
-            return None
+        try:
+            if self.im_source is "local_path":
+                name = self.file["image"][im_index][self.im_source].split(".")[0]
+                return name
+            else:
+                name = self.file["image"][im_index][self.im_source].split("/")[-1].split(".")[0]
+                return name
+        except:
+            return str(uuid.uuid4())
         
 
     @log_error
