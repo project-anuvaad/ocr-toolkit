@@ -137,7 +137,7 @@ def end_point_correction(region, y_margin,x_margin, ymax,xmax):
     xend = x + w + x_margin
     return True,int(ystart), int(yend), int(xstart), int(xend)
 
-def draw_box(image,regions)  :      
+def draw_box(image,regions,image_name)  :      
     for line_index, line in enumerate(regions):
         ground = line['boundingBox']['vertices']
         color = (255, 0, 0)
@@ -155,7 +155,7 @@ def draw_box(image,regions)  :
         cv2.putText(image, str(line['class']), (pts[0][0],pts[0][1]), font,  
                    1, (0,125,255), 1, cv2.LINE_AA)
 #         cv2.rectangle(image, (int(ground[0]['x']),int(ground[0]['y'])), (int(ground[2]['x']),int(ground[2]['y'])), color, thickness)
-    cv2.imwrite(config.SAVE_PATH_BOX+str(uuid.uuid4())+".jpg", image)
+    cv2.imwrite(config.SAVE_PATH_BOX+image_name+".jpg", image)
     return "None"
 
 def mask_image(image, page_regions,margin= 0 ,fill=255):

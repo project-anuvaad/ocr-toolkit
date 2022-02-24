@@ -63,7 +63,7 @@ class TextExtraction:
             print("Line  detection successfully completed:{}".format(app_context))
             image_copy = copy.deepcopy(self.image)
             if config.DRAW_BOX:
-                val=draw_box(image_copy,lines)
+                val=draw_box(image_copy,lines,self.image_name)
             regions  = multi_processing_tesseract(lines,self.image,lang)
             if config.MASK_OUT:
                 masked_image = mask_image(self.image,lines)

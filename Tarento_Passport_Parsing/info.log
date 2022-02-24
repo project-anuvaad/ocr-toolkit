@@ -2577,3 +2577,18 @@ AttributeError: 'list' object has no attribute 'split'
 [2022-02-22 15:13:33,810] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow_response successfully generated response for rest server
 [2022-02-22 15:13:33,810] {loghandler.py:21} Thread-1 INFO in loghandler: Resource Vision_OCR api response completed
 [2022-02-22 15:13:33,812] {_internal.py:225} Thread-1 INFO in _internal: 127.0.0.1 - - [22/Feb/2022 15:13:33] "POST /tarento/v0/passport-parsing HTTP/1.1" 200 -
+[2022-02-24 09:58:12,925] {geos.py:73} MainThread DEBUG in geos: Found GEOS DLL: <CDLL '/home/naresh/layout/lib/python3.6/site-packages/shapely/.libs/libgeos_c-a68605fd.so.1.13.1', handle 54c69d0 at 0x7f608afd0a20>, using it.
+[2022-02-24 09:58:12,948] {geos.py:38} MainThread DEBUG in geos: Trying `CDLL(libc.so.6)`
+[2022-02-24 09:58:12,949] {geos.py:55} MainThread DEBUG in geos: Library path: 'libc.so.6'
+[2022-02-24 09:58:12,949] {geos.py:56} MainThread DEBUG in geos: DLL: <CDLL 'libc.so.6', handle 7f612abd3000 at 0x7f608afd0c88>
+[2022-02-24 09:58:13,887] {checkpoint.py:150} MainThread INFO in checkpoint: [Checkpointer] Loading from ./src/utilities/primalinenet/passport_roi_v1.pth ...
+[2022-02-24 09:58:19,380] {_internal.py:225} MainThread WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-02-24 09:58:19,381] {_internal.py:225} MainThread INFO in _internal:  * Running on http://192.168.1.4:5000/ (Press CTRL+C to quit)
+[2022-02-24 09:59:00,266] {loghandler.py:21} Thread-1 INFO in loghandler: Resource OCR service started
+[2022-02-24 09:59:00,266] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow response started the response generation
+[2022-02-24 09:59:00,266] {loghandler.py:49} Thread-1 DEBUG in loghandler: process starting  for request {'config': {'language': {'sourceLanguage': 'en'}, 'superresolution': 'True'}, 'image': [{'local_path': 'kd2.jpeg'}]}
+[2022-02-24 09:59:32,963] {loghandler.py:21} Thread-1 INFO in loghandler:  Completed ocr process
+[2022-02-24 09:59:32,964] {loghandler.py:21} Thread-1 INFO in loghandler: non workflow_response successfully generated response for rest server
+[2022-02-24 09:59:32,964] {loghandler.py:21} Thread-1 INFO in loghandler: Resource Vision_OCR api response completed
+[2022-02-24 09:59:32,966] {_internal.py:225} Thread-1 INFO in _internal: 127.0.0.1 - - [24/Feb/2022 09:59:32] "POST /tarento/v0/passport-parsing HTTP/1.1" 200 -
