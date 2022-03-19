@@ -17,8 +17,8 @@ DOUBLE_OCR_LANG      =  'Devanagari'
 EMPTY_DF_LANG = "Devanagari"
 BASE_LANGUAGE = "Devanagari"
 
-TRAINED_EMPTY_DF_LANG = "Devanagari"
-TRAINED_LANGUAGE = "Devanagari"
+TRAINED_EMPTY_DF_LANG = "Trained_name"
+TRAINED_LANGUAGE = "Trained_name"
 
 
 img_path = "/home/srihari/Downloads/scene_text/all_data_combined/hindi/*.png"
