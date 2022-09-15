@@ -1,0 +1,8 @@
+[2022-02-11 12:23:14,448] {geos.py:73} MainThread DEBUG in geos: Found GEOS DLL: <CDLL '/home/ubuntu/eval/lib/python3.8/site-packages/shapely/.libs/libgeos_c-a68605fd.so.1.13.1', handle 5007580 at 0x7f7d8e920f40>, using it.
+[2022-02-11 12:23:14,459] {geos.py:38} MainThread DEBUG in geos: Trying `CDLL(libc.so.6)`
+[2022-02-11 12:23:14,460] {geos.py:55} MainThread DEBUG in geos: Library path: 'libc.so.6'
+[2022-02-11 12:23:14,460] {geos.py:56} MainThread DEBUG in geos: DLL: <CDLL 'libc.so.6', handle 7f7e5419f000 at 0x7f7d8e920f10>
+[2022-02-11 12:23:59,250] {geos.py:73} MainThread DEBUG in geos: Found GEOS DLL: <CDLL '/home/ubuntu/eval/lib/python3.8/site-packages/shapely/.libs/libgeos_c-a68605fd.so.1.13.1', handle 52ea620 at 0x7ff86e5abeb0>, using it.
+[2022-02-11 12:23:59,262] {geos.py:38} MainThread DEBUG in geos: Trying `CDLL(libc.so.6)`
+[2022-02-11 12:23:59,263] {geos.py:55} MainThread DEBUG in geos: Library path: 'libc.so.6'
+[2022-02-11 12:23:59,263] {geos.py:56} MainThread DEBUG in geos: DLL: <CDLL 'libc.so.6', handle 7ff933e2f000 at 0x7ff86e5abe80>
